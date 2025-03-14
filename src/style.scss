@@ -1,0 +1,63 @@
+
+p, figure, ul, li, body{
+    margin: 0; padding: 0; list-style: none;
+}
+
+header{
+    background-color: black;
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: white;
+        padding: 20px 30px;
+        &.active{
+            color: yellow;
+        }
+    }
+}
+
+main{
+    width: 80%; margin: 60px auto;
+    .list{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 30px;
+        div{
+            margin: 0 auto;
+            text-align: center;
+            padding: 15px;
+            background-color: #eee;
+            border-radius: 10px;
+            width: 200px;
+            b{
+                display: block;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.insert{
+    display: none;
+    padding: 30px;
+    position: fixed;
+    right: 7%; top: 13%;
+    width: 300px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    &.active{
+        display: block;
+    }
+        input{width: 100%;}
+        textarea, input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        textarea{height: 200px;}
+        
+}
