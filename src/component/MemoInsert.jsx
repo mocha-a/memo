@@ -33,7 +33,12 @@ function MemoInsert({data, setData}) {
 
         const entries = Object.fromEntries(formdata)
 
-        axios.post(`${process.env.REACT_APP_APIURL}/memo/m2`, entries)
+        axios({
+            url:`${process.env.REACT_APP_APIURL}/memo/m2`,
+            method: "post",
+            data: JSON.stringify(entries),
+            headers: {"Content-Type" : "application/json"}
+        })
         .then(res=>
             setData([...data, entries])
         )
